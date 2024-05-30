@@ -8,3 +8,9 @@ class MPPTests: FunSpec( {
 
 
 })
+
+/*
+Microservice Pipeline
+at a very basic level we're talking about build -> package -> deploy
+but the deployment should be consumed by other modules.
+* */

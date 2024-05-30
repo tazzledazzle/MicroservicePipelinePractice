@@ -1,7 +1,10 @@
+import java.net.URI
+
 plugins {
     id("org.jetbrains.kotlin.jvm").version("2.0.0")
     id( "groovy")
     id("java")
+    id("maven-publish")
 }
 
 repositories {
@@ -19,5 +22,18 @@ kotlin {
 tasks {
     test {
         useJUnitPlatform()
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "MicroservicePipelinePractice"
+            url = URI("https://github.com/tazzledazzle/MicroservicePipelinePractice")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
