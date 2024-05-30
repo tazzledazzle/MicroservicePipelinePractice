@@ -29,7 +29,7 @@ publishing {
     repositories {
         maven {
             name = "MicroservicePipelinePractice"
-            url = URI("https://github.com/tazzledazzle/MicroservicePipelinePractice")
+            url = URI("https://maven.pkg.github.com/tazzledazzle/MicroservicePipelinePractice")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
